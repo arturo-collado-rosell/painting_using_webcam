@@ -30,7 +30,7 @@ def overlay_image_alpha(img, img_overlay, x, y, alpha_mask):
 
 faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
-anonimus_face = cv2.imread('anonimus.png')
+#anonimus_face = cv2.imread('anonimus.png')
 # cv2.imshow('anonimus',anonimus_face) 
 # cv2.waitKey(100) 
 
@@ -57,12 +57,12 @@ while (captura.isOpened()):
 # 		
 		
         # cv2.imshow('video', imagen)
-        alpha_mask = anonimus_face[:, :, 2] / 255.0
-        img_result = imagen[:, :, :3].copy()
-        img_overlay = anonimus_face[:, :, :3]
-        overlay_image_alpha(img_result, img_overlay, x, y, alpha_mask)
-        cv2.imshow('Result', img_result)
-        
+        #alpha_mask = anonimus_face[:, :, 2] / 255.0
+        #img_result = imagen[:, :, :3].copy()
+        #img_overlay = anonimus_face[:, :, :3]
+        #overlay_image_alpha(img_result, img_overlay, x, y, alpha_mask)
+        #cv2.imshow('Result', img_result)
+        cv2.imshow('Result', imagen)
         
 # if cv2.waitKey(1) & 0xFF == ord('s'):
         
